@@ -1,0 +1,115 @@
+body {
+    background-color: #162604; /* Morado suave */
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.birthdayCard {
+    border-radius: 30px;
+    position: relative;
+    width: 420px;
+    height: 500px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transform: perspective(2000px);
+    transition: 1s;
+    font-family: 'Cursive', sans-serif; /* Cambia 'Cursive' por la fuente que prefieras */
+}
+
+.cardFront {
+    position: relative;
+    background-color: #a5c819; /* Azul claro */
+    width: 420px;
+    height: 500px;
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(118, 118, 118, 0.2), 30px 0 50px rgba(118, 118, 118, 0.2);
+}
+
+.bdHat {
+    width: 120px; /* Ajuste el tamaño del sombrero */
+    height: auto;
+    top: 5%;
+    left: 20%; /* Moví el sombrero hacia la derecha */
+    transform: rotate(-30deg);
+    position: absolute;
+    z-index: 4;
+    box-shadow: 0 0 0 10px #095427; /* Añade un marco blanco de 10px */
+}
+
+.balloons {
+    position: absolute;
+    width: 220px; /* Ajuste el tamaño de los globos */
+    height: auto;
+    right: -10px;
+    top: 10%; /* Moví los globos hacia abajo */
+    box-shadow: 0 0 0 10px #095427; /* Añade un marco blanco de 10px */
+}
+
+.jessImg {
+    display: flex;
+    justify-content: center;
+    top: 40%; /* Moví la imagen un poco más arriba */
+    left: 20%; /* Moví la imagen hacia la derecha */
+    position: absolute;
+    width: 200px; /* Ajusté el tamaño de la imagen */
+    height: auto;
+    z-index: 1;
+    box-shadow: 0 0 0 10px #095427; /* Añade un marco blanco de 10px */
+}
+
+.happy {
+    text-align: center;
+    left: 10%;
+    top: 80%; /* Ajusté la posición del texto feliz */
+    font-size: 1.5em;
+    font-family: 'Pacifico', cursive; /* Cambia 'Pacifico' por la fuente que prefieras */
+    color: #095113; /* Rosa claro */
+    position: absolute;
+    transition: 0.1s;
+    z-index: 6;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #42c50a; /* Naranja claro */
+    width: 420px;
+    height: 500px;
+    z-index: -1;
+    left: 0;
+    border-radius: 0 15px 15px 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(191, 190, 190, 0.2);
+}
+
+p {
+    line-height: 23px;
+    margin: 15px 10px 10px 30px;
+    color: #333;
+}
+
+.back {
+    font-family: 'Pacifico', cursive; /* Cambia 'Pacifico' por la fuente que prefieras */
+    color: #333;
+    text-align: center;
+    margin: 30px;
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(116, 115, 115, 0.5), 0 10px 100px rgba(116, 115, 115, 0.5);
+}
+
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+    visibility: hidden;
+}
